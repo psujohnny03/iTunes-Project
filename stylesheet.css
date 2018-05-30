@@ -1,0 +1,10 @@
+.background {
+    display: block;
+    margin: auto;
+    width: 1200px;
+    height: 400px;
+    padding: 0%;
+} 
+body {
+    background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Abstract-Music-Wallpaper-PIC-WPD0014235.jpg")
+}
