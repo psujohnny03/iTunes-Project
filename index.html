@@ -70,7 +70,7 @@
             event.preventDefault()
             var input = $("input").val()
             $.ajax({
-                url: "http://itunes.apple.com/search?term=" + input,
+                url: "https://itunes.apple.com/search?term=" + input,
                 dataType: 'JSONP'
             })
                 .done(function (data) {
