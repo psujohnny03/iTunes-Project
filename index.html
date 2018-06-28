@@ -8,52 +8,27 @@
         crossorigin="anonymous">
     <link rel="shortcut icon" href="http://findicons.com/files/icons/2770/ios_7_icons/512/music.png">
     <link rel="stylesheet" href="stylesheet.css">
-    <style>
-        li img {
-            width: 100px;
-        }
-        .amplitude-paused{
-            background-image: url("https://assets.teenvogue.com/photos/56beb9c092a7d1d17a7210aa/master/pass/GettyImages-151875329_master.jpg")
-        }
-        .amplitude-playing{
-            background-image: url("https://i.pinimg.com/736x/49/35/b6/4935b6d185bbb0b3aac7259878e4b804--glitter-eyeshadow-makeup-tutorials.jpg")
-        }
-        .amplitude-play-pause {
-            height: 200px;
-            width: 200px;
-            background-size: cover;
-        }
-    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-dark bg-dark">
         <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </nav>
-    <img src="https://orig00.deviantart.net/0356/f/2012/279/7/a/music__tools_by_mannem-d5gzh4z.png" class="background">
+    
     <h3>
         <a href="https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/#searchexamples">
-            Some Examples
         </a>
     </h3>
+    <br><br><br><br>
     <h3>
-        To Do Lists
+        Search your favorite artist at the top
     </h3>
-    <ul>
-        <li>CSS frame work</li>
-        <li>Search Bar</li>
-        <li>Loading image.</li>
-        <li>Error Message</li>
-        <li>No result found message.</li>
-        <li>Make it look pretty:)</li>
-    </ul>
-    <h3>
-        New songs
-    </h3>
-    <h1><span class="amplitude-play">PLAY</span></h1>
+    <h1>
+        <span class="amplitude-play">After your search, <br>click here to Play first track</span>
+    </h1>
     <ul id="songs">
 
     </ul>
@@ -63,9 +38,6 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@3.2.3/dist/amplitude.js"></script>
 
     <script>
-        // $(document).ready(... This is jQuery function that runs when the page is loaded.
-        // Do you want to load when the page is ready or when some button is clicked?
-        // Are you waiting for an input from the user???
         $("form").submit(function (event) {
             event.preventDefault()
             var input = $("input").val()
@@ -76,8 +48,7 @@
                 .done(function (data) {
                     console.log(data);
                     $("#songs").html("")
-                    // add code for when response from apple comes back.
-                    var ampArr=[];
+                    var ampArr = [];
                     for (var i = 0; i < data.results.length; i++) {
                         if (data.results[i].trackName) {
                             ampArr.push({
@@ -99,8 +70,7 @@
                     console.log(data);
                     $('#songs').append(data.status);
                 })
-        });// End of on ready part
-
+        });
 
     </script>
 </body>

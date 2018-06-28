@@ -1,10 +1,21 @@
-.background {
+/*.background {
     display: block;
     margin: auto;
     width: 1200px;
     height: 400px;
     padding: 0%;
-} 
+} */
 body {
     background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Abstract-Music-Wallpaper-PIC-WPD0014235.jpg")
+}
+.amplitude-paused {
+    background-image: url("https://playingforchange.com/wp-content/uploads/2017/04/play-button-warm-yellow.png")
+}
+.amplitude-playing {
+    background-image: url("https://png.pngtree.com/element_our/md/20180318/md_5aaeb1de622c2.png")
+}
+.amplitude-play-pause {
+    height: 200px;
+    width: 200px;
+    background-size: cover;
 }
